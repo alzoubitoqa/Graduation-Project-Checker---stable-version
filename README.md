@@ -1,74 +1,34 @@
-# 🎓 Graduation Project Checker (PDF/DOCX)
-
-Graduation Project Checker is a web-based application designed to help students verify whether their graduation project documentation meets the official university template and requirements.
-
-The system allows users to upload their project file in **PDF or Word (DOCX)** format and automatically performs structural and technical checks, providing clear feedback and improvement suggestions.
-
----
-
-## 🚀 Features
-
-- Upload graduation project files (PDF / DOCX)
-- Automatic compliance checking based on the official template
-- Clear compliance score
-- Project idea summary extraction
-- Detection of missing or incomplete chapters
-- Practical fix suggestions for each issue
-- DOCX formatting checks
-- Downloadable evaluation report (JSON)
-- Simple and user-friendly web interface
-
----
-
-## 🧠 System Overview
-
-The application uses a **rule-based evaluation engine** to ensure stable and reproducible results.  
-An AI-based feedback module is designed as an optional extension and can be enabled in future versions when API access is guaranteed.
-
----
-
-## 🛠️ Technologies Used
-
-- Python 3.10+
-- Streamlit
-- PDF & DOCX processing libraries
-- Rule-based validation logic
-
----
-
-## ▶️ How to Run Locally
-
-1. Clone the repository:
-```bash
+🎓 Graduation Project Checker (PDF/DOCX) - BAU Edition
+Graduation Project Checker هو تطبيق ويب متطور مصمم لمساعدة طلاب جامعة البلقاء التطبيقية (BAU) في التحقق من مطابقة وثائق مشاريع تخرجهم مع القالب الرسمي والمتطلبات الأكاديمية الصارمة.
+يستخدم النظام الذكاء الاصطناعي لفحص الهيكل الفني، والتأكد من وجود جميع الفصول الإلزامية، وتقديم نقد أكاديمي فوري يساعد الطالب على سد الفجوات قبل التسليم النهائي.
+🚀 الميزات الرئيسية (Key Features)
+دعم الملفات المتعددة: معالجة كاملة لملفات PDF و Word (DOCX).
+تحليل جوهر الفكرة (AI Summary): استخراج ملخص ذكي يشرح مشكلة المشروع وحلها بأسلوب لغوي سليم خالٍ من اللغات الدخيلة.
+التدقيق الصارم للفصول الخمسة: التأكد من وجود Chapters 1-5 (Introduction, Literature Review, Methodology, Results, Conclusion) كما هو محدد في قالب الجامعة.
+فحص المعايير المكتبية: التحقق من عدد كلمات الملخص (250-400 كلمة)، نوع الخط (Times New Roman 12pt)، والمسافات البادئة.
+كشف النواقص (Gap Detection): تحديد الأقسام المفقودة وعرضها في جداول منظمة توضح درجة أهمية كل نقص.
+مقترحات تعديل عملية (How to fix): تزويد الطالب بخارطة طريق واضحة لإصلاح الأخطاء المكتشفة.
+🧠 بنية النظام (System Architecture)
+يعتمد المشروع على هندسة برمجية منظمة (Modular Architecture) تضمن استقرار النظام وسهولة صيانته:
+UI Layer: واجهة تفاعلية مبنية باستخدام Streamlit.
+Extraction Layer: استخراج النصوص بدقة باستخدام مكتبات pypdf و python-docx.
+AI Engine (Groq): قلب النظام الذي يستخدم نموذج Llama 3.3-70B لتحليل البيانات وتقديم تقرير الجودة.
+🛠️ التقنيات المستخدمة (Technologies)
+Python 3.10+.
+Streamlit: لإطار عمل الويب
+Groq API: لتشغيل نماذج اللغة الضخمة فائق السرعة.
+PyPDF & Python-Docx: لمعالجة المستندات.
+▶️ طريقة التشغيل المحلي (How to Run)
+استنساخ المستودع:
 git clone https://github.com/alzoubitoqa/Graduation-Project-Checker---stable-version.git
 cd grad-checker-chatbot
-Create and activate virtual environment:
-
-python -m venv .venv
-.venv\Scripts\activate
-Install dependencies:
-
+إعداد مفتاح الـ API: قم بإنشاء ملف .streamlit/secrets.toml وضع فيه المفتاح الخاص بك:
+Ini, TOML
+GROQ_API_KEY = "gsk_your_key_here"
+تثبيت المكتبات:
 pip install -r requirements.txt
-Run the application:
-
-streamlit run app.py
-🌐 Deployment
-The application can be deployed publicly using Streamlit Community Cloud, allowing evaluators to access the system through a public link without any local setup.
-⚠️ Limitations
-
-The current version uses rule-based evaluation only.
-
-AI-based feedback is disabled in the stable version to ensure reliability.
-
-Formatting checks are available for DOCX files only.
-
-📄 License
-
-This project is licensed under the MIT License.
-
-👩‍💻 Author
-
-Toqa Alzoubi
-Graduation Project – Stable Version
-
-
+تشغيل التطبيق:
+streamlit run AI_Dashboard.py
+👩‍💻 المؤلف (Author)
+تقى الزعبي (Toqa Alzoubi)
+  - كلية الذكاء الاصطناعي - جامعة البلقاء التطبيقية.
